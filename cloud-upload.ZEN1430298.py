@@ -26,7 +26,7 @@ def upload_file(src, container, cdn_user, cdn_key, region):
         return 1
 
     try:
-        # Set public to False to use ServiceNet (Untested)
+        # Set public to False to use ServiceNet
         cf = pyrax.connect_to_cloudfiles(region=region, public=True)
     except Exception, e:
         print "!!!!!!! EXCEPTION: Failed to connect to cloud files !!!!! %s" % e
